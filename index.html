@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Homepage</title>
+</head>
+<body>
+
+<header><h1>Silas' Portfolio Website</h1></header>
+
+<div class="row">
+  <div class="column left" style="background-color: #f9f9e0;">
+    <header><h2>About Me</h2></header>
+    <center><img src="photos/mae icon.png" width="200" height="200" alt="headshot of baby mae borowski from indie game night in the woods"/></center>
+    <p>I'm a current senior at the University of North Texas completing my bachelor of arts in Technical Communication / Content Strategy in May 2026.</p>
+    <p>After I complete my bachelor's degree, I plan to pursue a Master of Arts in the same field.</p>
+    <p>Currently, I plan to work in the nonprofit field, ideally in the human services sector. I want to become a grant writer, though I'm also open to community outreach work.</p>
+  </div>
+  <div class="column right" style="background-color: #e2e0f9;">
+    <header><h2 color="black">Works</h2></header>
+    <button type="button" class="collapsible">Academic Writing</button>
+      <div class="content">
+        <!-- <p><a href="/academic/ai_paper.html" target="_blank">AI and Humanity</a></p> -->
+        <p><a href="/academic/fp_ops.html" target="_blank">Food Pantry Accessibility Report</a></p>
+        <p><a href="/academic/gg_grant.html" target="_blank">Giving Grace Grant Proposal</a></p>
+        <p><a href="/academic/ap_infograph.html" target="_blank">eSurvey Infographic</a></p>
+        <p><a href="/academic/directory.html" target="_blank">Other works</a></p>
+      </div>
+    <button type="button" class="collapsible">Personal Projects</button>
+      <div class="content">
+        <p><a href="/personal/spend_analyzer.html" target="_blank">2025 Spend Analyzer</a></p>
+        <p><a href ="/personal/dd_track.html" target="_blank">Due Date Tracker</a></p>
+        <p><a href="/personal/greenwood.html" target="_blank">Greenwood</a></p>
+        <p><a href="/personal/directory.html" target="_blank">Other works</a></p>
+      </div>
+    <!-- <a href ="/blog/directory.html" target="_blank"><button>Blog Posts</button></a> -->
+  </div>
+</div>
+</body>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  padding: 25px;
+  height: 600px;
+  margin-left: 75px;
+}
+
+.left {
+  width: 55%;
+  border-style: inset;
+  border-color: #7976ab;
+  margin-right: 5px;
+}
+
+.right {
+  width: 35%;
+  border-style: inset;
+  border-color: #7976ab;
+  margin-left: 5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  background-color: #e2e0f9;
+  color: black;
+  font-family: Verdana;
+}
+
+mainHead {
+  font-family: Georgia;
+  text-align: center;
+  color: white;
+}
+
+header {
+  font-family: Georgia;
+  text-align: center;
+  color: black;
+}
+
+.collapsible {
+  background-color: #a49fbf;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 18px;
+}
+
+.active, .collapsible:hover {
+  background-color: #7976ab;
+  color: white;
+  font-weight: bold;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+a:link {
+  color: #020726;
+}
+
+a:hover {
+  font-weight: bold;
+}
+
+button {
+  font-family: Georgia;
+  background-color: #a49fbf;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 18px;
+}
+
+button:hover {
+  font-family: Georgia;
+  background-color: #7976ab;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+
+</style>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+</html>
